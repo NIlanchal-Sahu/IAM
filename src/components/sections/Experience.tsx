@@ -3,7 +3,7 @@ import { experience } from "../../data/content";
 
 export function Experience() {
   return (
-    <section id="experience" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="experience" className="scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -17,7 +17,7 @@ export function Experience() {
           Roles and study — most recent first.
         </p>
 
-        <ol className="relative mt-12 max-w-3xl space-y-0 border-l border-white/10 pl-6 light:border-zinc-200">
+        <ol className="relative mt-8 max-w-3xl space-y-0 border-l border-white/10 pl-6 light:border-zinc-200">
           {experience.map((item, i) => (
             <motion.li
               key={item.id}
@@ -25,7 +25,7 @@ export function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: 0.05 * i }}
-              className="relative pb-10 last:pb-0"
+              className="relative pb-7 last:pb-0"
             >
               <span className="absolute -left-[29px] top-1.5 h-3 w-3 rounded-full border-2 border-cyan-400 bg-zinc-950 light:border-cyan-600 light:bg-white" />
               <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 light:text-zinc-500">

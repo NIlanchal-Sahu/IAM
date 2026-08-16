@@ -12,7 +12,7 @@ const item = {
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="about" className="scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -26,7 +26,7 @@ export function About() {
           A little context before we dive into the work.
         </p>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-3">
+        <div className="mt-8 grid gap-8 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <div className="glass rounded-2xl p-6 sm:p-8">
               {about.bio.map((p, i) => (

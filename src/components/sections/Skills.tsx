@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { skills, type SkillCategory } from "../../data/content";
 
-const categories: SkillCategory[] = ["Frontend", "Backend", "Tools / AI tools"];
+const categories: SkillCategory[] = ["AI / ML", "Backend & Cloud", "Languages & Tools"];
 
 const container = {
   hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ const card = {
 
 export function Skills() {
   return (
-    <section id="skills" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="skills" className="scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -29,10 +29,10 @@ export function Skills() {
           Skills
         </motion.h2>
         <p className="mt-2 max-w-2xl text-zinc-400 light:text-zinc-600">
-          Grouped by focus — from UI craft to platform and AI tooling.
+          Grouped by focus — from AI/ML and LLMs to cloud infrastructure and languages.
         </p>
 
-        <div className="mt-12 space-y-12">
+        <div className="mt-8 space-y-8">
           {categories.map((cat) => {
             const list = skills.filter((s) => s.category === cat);
             return (

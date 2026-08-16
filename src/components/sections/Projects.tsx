@@ -22,7 +22,7 @@ export function Projects() {
   }, [filter]);
 
   return (
-    <section id="projects" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="projects" className="scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -51,7 +51,7 @@ export function Projects() {
 
         <motion.ul
           layout
-          className="mt-10 grid gap-6 sm:grid-cols-2"
+          className="mt-8 grid gap-5 sm:grid-cols-2"
         >
           <AnimatePresence mode="popLayout">
             {visible.map((p) => (
@@ -83,22 +83,26 @@ export function Projects() {
                     ))}
                   </ul>
                   <div className="mt-5 flex flex-wrap gap-3">
-                    <a
-                      href={p.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300 light:text-cyan-700"
-                    >
-                      Live demo →
-                    </a>
-                    <a
-                      href={p.repoUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm font-medium text-zinc-500 transition hover:text-zinc-300 light:hover:text-zinc-700"
-                    >
-                      GitHub
-                    </a>
+                    {p.liveUrl && (
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300 light:text-cyan-700"
+                      >
+                        Live demo →
+                      </a>
+                    )}
+                    {p.repoUrl && (
+                      <a
+                        href={p.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium text-zinc-500 transition hover:text-zinc-300 light:hover:text-zinc-700"
+                      >
+                        GitHub
+                      </a>
+                    )}
                   </div>
                 </article>
               </motion.li>

@@ -51,14 +51,14 @@ export function Footer() {
             <LinkedInIcon />
           </a>
           <a
-            href={profile.social.instagram}
+            href={profile.social.website}
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-cyan-400 light:hover:text-cyan-700"
-            aria-label="Instagram"
+            aria-label="NITA Classes"
           >
-            <span className="sr-only">Instagram</span>
-            <InstagramIcon />
+            <span className="sr-only">NITA Classes</span>
+            <WebsiteIcon />
           </a>
         </div>
       </div>
@@ -86,10 +86,11 @@ function LinkedInIcon() {
   );
 }
 
-function InstagramIcon() {
+function WebsiteIcon() {
   return (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 2.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zM6.5 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z" />
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
     </svg>
   );
 }

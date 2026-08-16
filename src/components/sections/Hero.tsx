@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100dvh] flex-col justify-center pt-24 pb-16 sm:pt-28"
+      className="relative flex min-h-[88dvh] flex-col justify-center pt-24 pb-10 sm:pt-28 sm:pb-12"
     >
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:gap-16">
         <div className="max-w-2xl">
@@ -25,7 +25,7 @@ export function Hero() {
             transition={{ duration: 0.4 }}
             className="mb-2 text-sm font-medium uppercase tracking-widest text-cyan-400/90 light:text-cyan-700"
           >
-            Available for work
+            Pragyaa.ai
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-cyan-500/20 to-violet-500/20 blur-2xl" />
           <motion.img
             src={profile.avatar}
-            alt=""
+            alt={`Portrait of ${profile.name}`}
             className="relative h-auto w-full max-w-sm rounded-3xl border border-white/10 object-cover shadow-2xl light:border-zinc-200"
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}

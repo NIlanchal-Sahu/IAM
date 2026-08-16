@@ -1,34 +1,34 @@
 export const profile = {
-  name: "Alex Morgan",
-  title: "AI Developer | Content Creator",
+  name: "Nilanchal Sahu",
+  title: "AI/ML Engineer | Data Science Lead",
   tagline:
-    "I build fast, accessible web products and share what I learn about AI, tooling, and modern frontend craft.",
-  email: "hello@example.com",
-  location: "Remote · Earth",
-  avatar: "/avatar-placeholder.svg",
-  /** Add `public/resume.pdf` for one-click download; link still works for resume requests. */
-  resumeUrl: "/resume.pdf",
+    "I build enterprise AI solutions — from LLM-powered voice analytics and prompt fine-tuning to scalable ML APIs on cloud-native infrastructure.",
+  email: "tech.nilanchala25@gmail.com",
+  phone: "+91 9040358148",
+  location: "Burla, Odisha · India",
+  avatar: "/avatar.jpg",
+  resumeUrl: "/CV_Nilanchala_Sahu.docx",
   social: {
-    linkedin: "https://www.linkedin.com/in/example",
-    github: "https://github.com/example",
-    instagram: "https://www.instagram.com/example",
+    linkedin: "https://www.linkedin.com/in/nilanchal-sahu",
+    github: "https://github.com/nilanchalsahu",
+    website: "https://www.nitaclasses.in",
   },
 };
 
 export const about = {
   bio: [
-    "I’m a developer and creator who enjoys turning ideas into shipped software — from polished UIs to ML-powered features.",
-    "My background blends product engineering, developer education, and a steady curiosity for how AI can augment creative work.",
-    "When I’m not coding, I’m writing, recording, and experimenting with new tools in public.",
+    "I'm an AI/ML Engineer specializing in enterprise AI solutions, with deep experience in voice call analysis, evaluation prompt fine-tuning, and predictive model deployment.",
+    "At Pragyaa.ai, I deploy models via AWS Lambda and API Gateway, build backend inference logic, and design microservices architectures on cloud-native VM environments.",
+    "Beyond enterprise AI, I founded and run NITA Classes — an online LMS and coaching academy at nitaclasses.in — combining technical leadership with education and product ownership.",
   ],
   highlights: [
-    "5+ years shipping web apps for startups and side projects",
-    "Focus on performance, a11y, and maintainable design systems",
-    "Active in open source and content around AI + frontend",
+    "5+ years building AI/ML systems for banking, healthcare, and enterprise domains",
+    "Expertise in LLMs, prompt engineering, model deployment, and REST/microservices APIs",
+    "Certified AI Intelligence Business Analyst (SSC/Q8102) with microservices & cloud credentials",
   ],
 };
 
-export type SkillCategory = "Frontend" | "Backend" | "Tools / AI tools";
+export type SkillCategory = "AI / ML" | "Backend & Cloud" | "Languages & Tools";
 
 export type Skill = {
   name: string;
@@ -37,14 +37,18 @@ export type Skill = {
 };
 
 export const skills: Skill[] = [
-  { name: "React & TypeScript", level: 92, category: "Frontend" },
-  { name: "Tailwind CSS", level: 90, category: "Frontend" },
-  { name: "Web APIs & a11y", level: 85, category: "Frontend" },
-  { name: "Node.js & Express", level: 82, category: "Backend" },
-  { name: "REST & APIs", level: 88, category: "Backend" },
-  { name: "Postgres / Firebase", level: 75, category: "Backend" },
-  { name: "Git & CI (Vite, ESLint)", level: 90, category: "Tools / AI tools" },
-  { name: "Cursor, Copilot, LLM APIs", level: 86, category: "Tools / AI tools" },
+  { name: "AI/ML & LLMs", level: 94, category: "AI / ML" },
+  { name: "Prompt Engineering", level: 92, category: "AI / ML" },
+  { name: "Model Deployment & Inference", level: 90, category: "AI / ML" },
+  { name: "OpenSearch & Analytics", level: 85, category: "AI / ML" },
+  { name: "AWS Lambda & API Gateway", level: 90, category: "Backend & Cloud" },
+  { name: "Azure & GCP", level: 82, category: "Backend & Cloud" },
+  { name: "FastAPI, Flask & REST APIs", level: 92, category: "Backend & Cloud" },
+  { name: "Docker, Linux & Microservices", level: 88, category: "Backend & Cloud" },
+  { name: "Python", level: 94, category: "Languages & Tools" },
+  { name: "Java", level: 85, category: "Languages & Tools" },
+  { name: "React", level: 80, category: "Languages & Tools" },
+  { name: "SQL & MySQL", level: 88, category: "Languages & Tools" },
 ];
 
 export type Project = {
@@ -52,8 +56,8 @@ export type Project = {
   title: string;
   description: string;
   stack: string[];
-  liveUrl: string;
-  repoUrl: string;
+  liveUrl?: string;
+  repoUrl?: string;
   image?: string;
   tags: string[];
 };
@@ -61,43 +65,28 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Neon Dashboard",
+    title: "AI Voice Analytics & Call Evaluation",
     description:
-      "Analytics dashboard with glassmorphism UI, real-time charts, and role-based views.",
-    stack: ["React", "Vite", "Tailwind", "Recharts"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/example/neon-dashboard",
-    tags: ["web", "dashboard"],
+      "LLM-based pipelines for analysing voice call transcripts — evaluating call quality, generating summaries and verbatims, and extracting actionable insights. Optimized prompts and evaluation logic across banking and healthcare domains.",
+    stack: ["LLMs", "Python", "Prompt Engineering", "AWS"],
+    tags: ["ai", "llm", "enterprise"],
   },
   {
     id: "2",
-    title: "Prompt Kit",
+    title: "AI/ML Prediction & API Services Platform",
     description:
-      "A small library and CLI to template and validate LLM prompts in TypeScript projects.",
-    stack: ["TypeScript", "Node", "Zod"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/example/prompt-kit",
-    tags: ["ai", "devtools"],
+      "Designed and deployed predictive ML models as scalable API services with backend inference logic and cloud-native deployments using serverless and VM-based architectures.",
+    stack: ["Python", "FastAPI", "AWS Lambda", "Docker"],
+    tags: ["ai", "ml", "cloud"],
   },
   {
     id: "3",
-    title: "Orbit Notes",
+    title: "NITA Classes — LMS & Coaching Academy",
     description:
-      "Lightweight PWA for capturing ideas with offline support and end-to-end friendly architecture.",
-    stack: ["React", "IndexedDB", "Workbox"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/example/orbit-notes",
-    tags: ["web", "pwa"],
-  },
-  {
-    id: "4",
-    title: "Content Studio",
-    description:
-      "Internal tool for planning and scheduling multi-channel posts with a Kanban flow.",
-    stack: ["Next.js", "Prisma", "Postgres"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/example/content-studio",
-    tags: ["web", "fullstack"],
+      "Built and operate a full online learning management system and coaching academy. Own the institute end-to-end — platform, content, and operations.",
+    stack: ["React", "Python", "MySQL", "REST APIs"],
+    liveUrl: "https://www.nitaclasses.in",
+    tags: ["lms", "fullstack", "education"],
   },
 ];
 
@@ -112,23 +101,26 @@ export type TimelineItem = {
 export const experience: TimelineItem[] = [
   {
     id: "e1",
-    title: "Senior Frontend Engineer",
-    org: "Northwind Labs",
-    range: "2023 — Present",
-    detail: "Design systems, performance, and AI-assisted workflows across product teams.",
+    title: "AI / ML Engineer",
+    org: "Pragyaa.ai",
+    range: "Present",
+    detail:
+      "Enterprise AI solutions: voice call analysis, LLM prompt fine-tuning, predictive model deployment on AWS Lambda & API Gateway, and microservices architecture.",
   },
   {
     id: "e2",
-    title: "Full-Stack Developer",
-    org: "Aurora Studio",
-    range: "2020 — 2023",
-    detail: "Shipped customer-facing apps with React, Node, and serverless on Vercel.",
+    title: "Founder & Owner",
+    org: "NITA Classes (nitaclasses.in)",
+    range: "Present",
+    detail:
+      "Developed and run an online LMS and coaching academy — owning the platform, curriculum, and institute operations.",
   },
   {
     id: "e3",
-    title: "B.S. Computer Science",
-    org: "State University",
-    range: "2016 — 2020",
+    title: "M.C.A. — Master of Computer Application",
+    org: "VSSUT, Burla, Odisha",
+    range: "Completed",
+    detail: "Postgraduate degree in computer applications.",
   },
 ];
 
@@ -141,5 +133,5 @@ export const navLinks = [
   { id: "contact", label: "Contact" },
 ] as const;
 
-export const projectFilters = ["all", "web", "ai", "fullstack", "pwa", "dashboard", "devtools"] as const;
+export const projectFilters = ["all", "ai", "ml", "llm", "cloud", "enterprise", "lms", "fullstack", "education"] as const;
 export type ProjectFilter = (typeof projectFilters)[number];

@@ -76,7 +76,7 @@ export function Contact() {
   const { social } = profile;
 
   return (
-    <section id="contact" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="contact" className="scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -91,7 +91,7 @@ export function Contact() {
           (see <code className="rounded bg-white/5 px-1 text-xs">README</code>) for API delivery without mailto.
         </p>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-5">
+        <div className="mt-8 grid gap-8 lg:grid-cols-5">
           <div className="glass rounded-2xl p-6 lg:col-span-2">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-cyan-400/90 light:text-cyan-700">
               Social
@@ -119,12 +119,12 @@ export function Contact() {
               </li>
               <li>
                 <a
-                  href={social.instagram}
+                  href={social.website}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-zinc-300 transition hover:text-cyan-300 light:text-zinc-700 light:hover:text-cyan-700"
                 >
-                  Instagram
+                  NITA Classes
                 </a>
               </li>
             </ul>
@@ -135,6 +135,13 @@ export function Contact() {
                 href={`mailto:${profile.email}`}
               >
                 {profile.email}
+              </a>
+              {" · "}
+              <a
+                className="text-cyan-400 hover:underline light:text-cyan-700"
+                href={`tel:${profile.phone.replace(/\s/g, "")}`}
+              >
+                {profile.phone}
               </a>
             </p>
           </div>
